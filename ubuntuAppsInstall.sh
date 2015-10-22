@@ -1,15 +1,25 @@
 #!/bin/bash
 sudo add-apt-repository ppa:videolan/stable-daily
-udo add-apt-repository ppa:linrunner/tlp
+sudo add-apt-repository ppa:linrunner/tlp
+sudo add-apt-repository ppa:webupd8team/atom
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 sudo add-apt-repository ppa:atareao/telegram -y
 sudo apt-get -y update
 #install lamp server
 sudo apt-get -y install lamp-server^
 #install phpMyAdmin
 sudo apt-get -y install phpmyadmin
+#Install Git and Mercurial
+sudo apt-get -y install git mercurial
 #install system updates
 sudo apt-get -y upgrade
+#Install Chrome
+sudo apt-get -y install google-chrome-stable 
+#Install vlc
 sudo apt-get -y install vlc
+#install Atom editor
+sudo apt-get -y install atom
 #Install Media Codecs and DVD playback
 sudo apt-get -y install gstreamer0.10-plugins-ugly gxine libdvdread4 icedax tagtool easytag id3tool lame nautilus-script-audio-convert libmad0 mpg321 gstreamer1.0-libav
 sudo /usr/share/doc/libdvdread4/./install-css.sh
@@ -37,9 +47,12 @@ sudo apt-get -y install brasero k3b xfburn furiusisomount
 sudo apt-get -y install skype xchat telegram
 #Enable Desktop Visual Effect
 sudo apt-get -y install compiz compizconfig-settings-manager compiz-plugins-extra
+#Install Powertop
+sudo apt-get -y install powertop
 #Install Tweak Tools
 sudo apt-get -y install unity-tweak-tool gnome-tweak-tool
 #clean your system after install
 sudo apt-get -y autoremove
 sudo apt-get -y autoclean 
 sudo apt-get -y clean
+
