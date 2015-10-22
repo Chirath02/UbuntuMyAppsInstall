@@ -1,1 +1,9 @@
-# UbuntuMyAppsInstall  \n My personal apps install script for Ubuntu
+# UbuntuMyAppsInstall
+  
+My apps install script for Ubuntu
+
+<h2>Installation</h2>
+
+sudo ./ubuntuAppsInstall.sh
+
+
